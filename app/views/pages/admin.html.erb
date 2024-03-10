@@ -1,0 +1,26 @@
+<!-- app/views/pages/admin.html.erb -->
+<%= form_with(model: @repairman, url: register_repairman_path, method: :post) do |form| %>
+<br>
+  <%= form.label :first_name %>
+  <%= form.text_field :first_name %>
+<br>
+  <%= form.label :second_name %>
+  <%= form.text_field :second_name %>
+<br>
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+<br>
+  <%= form.label :location %>
+  <%= form.text_field :location %>
+<br>
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+<br>
+  <%= form.label :password_confirmation %>
+  <%= form.password_field :password_confirmation %>
+<br>
+  <%= form.label :terms %>
+  <%= form.check_box :terms %>
+<br>
+  <%= form.submit 'Create/Save Repairman' %>
+<% end %>
