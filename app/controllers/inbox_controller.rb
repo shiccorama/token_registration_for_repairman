@@ -20,4 +20,11 @@ class InboxController < ApplicationController
   def handle_inbound(event_payload)
     head(:ok)
   end
+
+  private
+
+  def repairman_params
+    params.require(:repairman).permit(:first_name, :second_name, :age, :location, :password, :password_confirmation, :terms)
+  end
+  
 end
